@@ -1,0 +1,75 @@
+.file-table {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-fixed-cell-size: 42px;
+}
+
+.file-table .column-header-background {
+    -fx-background-color: #F7F8FB;
+    -fx-background-radius: 8 8 0 0;
+    -fx-background-insets: 0;
+}
+
+.file-table .column-header,
+.file-table .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #EAECF1 transparent;
+    -fx-size: 40px;
+}
+
+.file-table .column-header .label {
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 14px;
+    -fx-text-fill: #788196;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.file-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #F0F1F5 transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.file-table .table-row-cell:hover {
+    -fx-background-color: #F8F9FC;
+}
+
+.file-table .table-row-cell:selected {
+    -fx-background-color: #EEF0FF;
+}
+
+.file-table .table-row-cell:selected .table-cell {
+    -fx-text-fill: #3546B8;
+}
+
+.file-table .table-cell {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0 14px;
+    -fx-text-fill: #30384A;
+    -fx-font-size: 12px;
+}
+
+.file-table .placeholder .label {
+    -fx-text-fill: #9299A8;
+    -fx-font-size: 12px;
+}
+
+.file-table .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 9px;
+}
+
+.file-table .scroll-bar:vertical .thumb {
+    -fx-background-color: #D9DDE7;
+    -fx-background-radius: 8px;
+}
+
+.file-table .scroll-bar .track,
+.file-table .scroll-bar .increment-button,
+.file-table .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
