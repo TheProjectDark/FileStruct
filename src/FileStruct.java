@@ -20,6 +20,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -72,11 +74,11 @@ public class FileStruct extends Application {
         stage.setMinWidth(720);
         stage.setMinHeight(480);
 
-        Label mark = new Label("F");
-        mark.setAlignment(Pos.CENTER);
-        mark.setMinSize(34, 34);
-        mark.setStyle("-fx-background-color: " + ACCENT + "; -fx-background-radius: 10;"
-                + "-fx-text-fill: white; -fx-font-size: 17px; -fx-font-weight: bold;");
+        ImageView mark = new ImageView(new Image(
+                FileStruct.class.getResourceAsStream("/assets/FileStruct.png")));
+        mark.setFitWidth(34);
+        mark.setFitHeight(34);
+        mark.setPreserveRatio(true);
 
         Label brand = new Label("FileStruct");
         brand.setStyle("-fx-text-fill: " + TEXT + "; -fx-font-size: 16px; -fx-font-weight: bold;");
