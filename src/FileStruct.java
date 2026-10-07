@@ -32,7 +32,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class Main extends Application {
+public class FileStruct extends Application {
     private static final String ACCENT = "#5365D8";
     private static final String TEXT = "#202638";
     private static final String MUTED = "#788196";
@@ -42,10 +42,16 @@ public class Main extends Application {
             "Documents", Set.of("pdf", "doc", "docx", "txt", "rtf", "odt", "xls", "xlsx", "ppt", "pptx", "csv"),
             "Videos", Set.of("mp4", "mov", "mkv", "avi", "webm"),
             "Audio", Set.of("mp3", "wav", "flac", "aac", "m4a", "ogg"),
-            "Archives", Set.of("zip", "rar", "7z", "tar", "gz", "bz2")
+            "Archives", Set.of("zip", "rar", "7z", "tar", "gz", "bz2"),
+            "ISO_Images", Set.of("iso"),
+            "Executables", Set.of("exe"),
+            "Java_code_files", Set.of(".java"),
+            "CPP_code_fIles", Set.of("cpp", "hpp")
     );
     private static final DateTimeFormatter MODIFIED_FORMAT =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").withZone(ZoneId.systemDefault());
+
+
 
     private final ObservableList<FileItem> files = FXCollections.observableArrayList();
     private final TableView<FileItem> fileTable = new TableView<>(files);
@@ -121,7 +127,7 @@ public class Main extends Application {
         BorderPane root = new BorderPane(content);
         root.setStyle("-fx-background-color: #F5F6FA; -fx-font-family: 'Arial';");
         Scene scene = new Scene(root, 920, 620);
-        scene.getStylesheets().add(Main.class.getResource("/filestruct.css").toExternalForm());
+        scene.getStylesheets().add(FileStruct.class.getResource("/filestruct.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
     }
