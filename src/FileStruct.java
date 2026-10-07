@@ -43,10 +43,8 @@ public class FileStruct extends Application {
             "Videos", Set.of("mp4", "mov", "mkv", "avi", "webm"),
             "Audio", Set.of("mp3", "wav", "flac", "aac", "m4a", "ogg"),
             "Archives", Set.of("zip", "rar", "7z", "tar", "gz", "bz2"),
-            "ISO_Images", Set.of("iso"),
-            "Executables", Set.of("exe"),
-            "Java_code_files", Set.of(".java"),
-            "CPP_code_fIles", Set.of("cpp", "hpp")
+            "Code", Set.of("java", "py", "js", "html", "css", "c", "cpp", "cs", "rb", "php", "ts"),
+            "Other", Set.of()
     );
     private static final DateTimeFormatter MODIFIED_FORMAT =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").withZone(ZoneId.systemDefault());
